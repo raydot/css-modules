@@ -1,0 +1,28 @@
+{
+  "name": "css-modules",
+  "version": "1.0.0",
+  "description": "See the README for more info",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack && open index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raydot/css-modules.git"
+  },
+  "keywords": [
+    "javascript",
+    "css",
+    "modules"
+  ],
+  "author": "Dave Kanter",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/raydot/css-modules/issues"
+  },
+  "homepage": "https://github.com/raydot/css-modules#readme",
+  "devDependencies": {
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}

@@ -1,0 +1,1 @@
+alert("DEATH BEFORE DISCO")
