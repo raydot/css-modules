@@ -2,7 +2,7 @@
 
 Following https://css-tricks.com/css-modules-part-1-need/ on CSS Modules.
 
-## What are CSS Modules?
+## What are CSS Modules? (Part I)
 
 CSS Modules is not an _official spec_ or an _implementation in the browser_ but rather a process in a build step (webpack or browserify) that changes class names and selectors to be scoped.
 
@@ -128,3 +128,17 @@ We don't need to use [BEM](https://css-tricks.com/bem-101/)!  And I'm not going 
 [And there's so many more great reasons to use modules!](https://glenmaddern.com/articles/css-modules)
 
 [There's also a further reading section here.](https://css-tricks.com/css-modules-part-1-need/#further-reading)
+
+## Getting Started with CSS Modules (Part II)
+
+CSS should never rely on client-side Javascript to work.  Or something.  So let's get into Webpack!
+
+Part II in involves using webpack to create some css that is then "modularized" into styles.css by Webpack.
+
+It's mostly straightforward, except for the use of `MiniCssExtractPlugin`.  I used that instead of `ExtractTextPlugin`, which is deprecated.  The only thing it didn't seem to offer was an `.extract` function which allowed for the customization of the derived class names.  There might still be a way to do that, I don't know!
+
+## React + CSS Modules = 😍 (Part III)
+
+In the final post, we will be making a static React site with Webpack's help.  The site will have two templates: a homepage and an about page with a coupe of React components to explain how things work in practice.
+
+One issue: in the tutorial it instructs the user to set the `libraryTarget` to `umd` in `webpack.config.js`.  This results in an error of the window object being undefined.  The solution to this problem was to add the setting `globalObject: this`. 

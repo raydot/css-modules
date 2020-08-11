@@ -1,12 +1,9 @@
-import greetings from './robot.js'
-import styles from './app.css'
-var faker = require('faker')
+import React from 'react'
+import ReactDOMServer from 'react-dom/server'
+import Main from './templates/Main.js'
 
-document.write(greetings("Affirmative", "Dave"))
+module.exports = function render(locals, callback) {
+    const html = ReactDOMServer.renderToStaticMarkup(React.createElement(Main, locals))
+    callback(null, '<!DOCTYPE html' + html)
 
-let element = `
-  <div class="${styles.element}">
-    <p>${faker.lorem.paragraph()}</p>
-  </div>
-`
-document.write(element)
+}
